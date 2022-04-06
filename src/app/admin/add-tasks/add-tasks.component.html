@@ -1,0 +1,22 @@
+Project Name :
+<select [(ngModel)]="projectId" id="projectName" (change)="getModulebyproject($event)">
+    <option *ngFor="let p of project" value="{{p._id}}"> {{p.projectTitle}}
+    </option>
+</select><br><br>
+Module Name :
+<select [(ngModel)]="moduleId" >
+    <option *ngFor="let m of module" value="{{m._id}}"> {{m.moduleName}}
+    </option>
+</select><br><br>
+Task Name :
+<input type="text" id="email_address_2" [(ngModel)]="taskName" placeholder="Enter Task Name"><br><br>
+Task Description :
+<textarea [(ngModel)]="description"  placeholder="Enter Task Descripation"></textarea><br><br>
+Estimate Time :
+<input type="text"  [(ngModel)]="totalTime" placeholder="Enter Estimate Time (IN Minutes)"><br><br>
+Priority :
+<select [(ngModel)]="priorityId" >
+    <option *ngFor="let p of priority" value="{{p._id}}"> {{p.priorityName}}
+    </option>
+</select><br><br>
+<button type="button" (click)="addTask()" >Add Module</button>

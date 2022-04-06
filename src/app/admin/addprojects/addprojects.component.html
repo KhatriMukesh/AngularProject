@@ -1,0 +1,9 @@
+Project Name : <input type="text" [(ngModel)]="projectName" placeholder="Enter Project Name"><br><br>
+Project Description : <textarea type="text" [(ngModel)]="projectDescription" placeholder="Enter Project Description "></textarea><br><br>
+<!-- Project Description : <input type="text" [(ngModel)]="projectDescription" placeholder="Enter Project Name"><br> -->
+Project Technology : <input type="text" [(ngModel)]="projectTechnology" placeholder="Enter Project Technology"><br><br>
+Project Manager : <select [(ngModel)]="projectManager" >
+    <option *ngFor="let manager of managers" value="{{manager._id}}" > {{manager.firstName}}</option>
+</select><br><br>
+Estimated Hours : <input type="text" [(ngModel)]="estimateHours" placeholder="Enter Estimated Hours"><br><br>
+<button type="button"  (click)="addProject()">Add Project</button><br>

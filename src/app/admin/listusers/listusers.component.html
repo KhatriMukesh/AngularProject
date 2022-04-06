@@ -1,0 +1,29 @@
+<table border="1">
+    <thead>
+        <tr>
+            <th>Index</th>
+            <th>User Name</th>
+            <th>Email</th>
+            <th>Gender</th>
+            <th>Contact</th>
+            <th>Role</th>
+            <!-- <th>Status</th> -->
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let user of users, let i = index">
+            <td>{{i+1}}</td>
+            <td>{{user.firstName}}</td>
+            <td>{{user.email}}</td>
+            <td>{{user.gender}}</td>
+            <td>{{user.contactNumber}}</td>
+            <td>{{user.role.roleName}}</td>
+            <!-- <td>{{user.status}}</td> -->
+            <td>
+                <!-- <button  (click)="disableUser(user._id)"> Disable </button> -->
+                <button (click)="deleteUser(user._id)"> Delete </button>
+            </td>
+        </tr>
+    </tbody>
+</table>

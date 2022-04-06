@@ -1,0 +1,27 @@
+ <table border="1">
+    <thead>
+        <tr>
+            <th>Project Name</th>
+            <th>Module Name</th>
+            <th>Description</th>
+            <th>Priority</th>
+            <th>Estimated Hours</th>
+            <th>Actions</th>
+            <th>Status</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let module of modules">
+            
+            <td>{{module.projectId.projectTitle}}</td>
+            <td>{{module.moduleName}}</td>
+            <td>{{module.description}}</td>
+            <td>{{module.priorityId.priorityName}}</td>
+            <td>{{module.estimatedTime}}</td>
+            <td><button (click)="editModule(module._id)">Edit</button>
+                <button (click)="deleteModule(module._id)">Delete</button>
+            </td>
+            <td>{{module.statusId.statusName}}</td>
+        </tr>
+    </tbody>
+</table>

@@ -1,0 +1,25 @@
+<table border="1">
+    <thead>
+        <tr>
+            <td>Project Name</td>
+            <td>Project Manager</td>
+            <td>Description</td>
+            <td>Technology</td>
+            <td>Start Date</td>
+            <td>Estimated Hours</td>
+            <td>Status</td>
+        </tr>
+    </thead>
+
+<tbody>
+    <tr *ngFor="let project of projects">
+        <td>{{project.projectTitle}}</td>
+        <td>{{project.projectManagerID.firstName}}</td>
+        <td>{{project.description}}</td>
+        <td>{{project.technology}}</td>
+        <td>{{project.startDate}}</td>
+        <td>{{project.estimatedHours}}</td>
+        <td>{{project.statusId.statusName}}</td>
+    </tr>
+</tbody>
+</table>

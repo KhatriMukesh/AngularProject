@@ -1,0 +1,7 @@
+<h2>Login</h2>
+<input  type="email" [(ngModel)]="email" placeholder="Enter your email"><br><br>
+<input  type="password" [(ngModel)]="password" placeholder="Enter your password"><br><br>
+Forgot Password ? <a routerLink="/forgot" class="text-danger">Forgot Password</a><br><br>
+<button type="submit" (click)="login()" >Login</button><br><br>
+Not a user ? <a routerLink="/signup" >Signup Here</a>
+

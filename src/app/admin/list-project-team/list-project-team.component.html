@@ -1,0 +1,29 @@
+ <table border="1">
+    <thead>
+        <tr>
+            <th>Index</th>
+            <th>Project Name</th>
+            <th>Project Manager</th>
+            <th>Project Description</th>
+            <th>Project Technology</th>
+            <th>Estimated Hours</th>
+            <th>Actions</th>
+            <th>Status</th>
+        </tr>
+    </thead>
+<tbody>
+    <tr *ngFor="let project of projects, let i = index">
+        <td>{{i+1}}</td>
+        <td>{{project.projectTitle}}</td>
+        <td>{{project.projectManagerID.firstName}}</td>
+        <td>{{project.description}}</td>
+        <td>{{project.technology}}</td>
+        <td>{{project.estimatedHours}}</td>
+        <td>
+            <button (click)="editProject(project._id)">Edit</button>
+            <button (click)="deleteProject(project._id)">Delete</button>
+        </td>
+        <td>{{project.statusId?.statusName}}</td>
+    </tr>
+</tbody>
+</table>

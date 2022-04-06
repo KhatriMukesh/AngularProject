@@ -1,0 +1,29 @@
+<table border="1">
+    <thead>
+        <tr>
+            <th>Project Name</th>
+            <th>Moduel Name</th>
+            <th>Task Name</th>
+            <th>Description</th>
+            <th>Priority</th>
+            <th>Estimate Hours</th>
+            <th>Action</th>
+            <th>Status</th>
+        </tr>
+    </thead>
+<tbody>
+    <tr *ngFor="let task of tasks">
+        <td>{{task.projectId.projectTitle}}</td>
+        <td>{{task.moduleId.moduleName}}</td>
+        <td>{{task.taskName}}</td>
+        <td>{{task.description}}</td>
+        <td>{{task.priorityId.priorityName}}</td>
+        <td>{{task.totalTime}}</td>
+        <td><button class="btn btn-primary" style="width: 100%;"
+                (click)="editTask(task._id)">Edit</button><button
+                class="btn btn-danger" style="width: 100%;"
+                (click)="deleteTask(task._id)">Delete</button></td>
+        <td>{{task.statusId.statusName}}</td>
+    </tr>
+</tbody>
+</table>

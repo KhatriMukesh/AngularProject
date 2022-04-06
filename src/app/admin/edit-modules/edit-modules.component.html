@@ -1,0 +1,14 @@
+Project :
+<input type="text"  value="{{projectTitle}}" readonly ><br><br>
+Module Name :
+<input type="text"  [(ngModel)]="moduleName"><br><br>
+Module Description :
+<textarea type="text" [(ngModel)]="description" ></textarea><br><br>
+Module Priority :
+<select [(ngModel)]="priorityId" >
+    <option *ngFor="let p of priority" value="{{p._id}}"> {{p.priorityName}}
+    </option>
+</select><br><br>
+Estimate Hours :
+<input type="text"  [(ngModel)]="estimatedTime" ><br><br>
+<button type="button" (click)="updateModule()" >Update</button>

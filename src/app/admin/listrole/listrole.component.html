@@ -1,0 +1,19 @@
+<table border="1">
+    <thead>
+        <tr>
+            <th>Index</th>
+            <th>Role Name</th>
+            <th>Action</th>
+            <th>Status</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let role of roles, let i = index">
+        <td >{{i+1}}</td>
+        <td>{{role.roleName}}</td>
+        <td><button (click)="editRole(role._id)">Edit</button><button (click)="deleteRole(role._id)">Delete</button></td>
+        <!-- <td>{{role.isActive}}</td> -->
+        <td>Active</td>
+    </tr>
+    </tbody>
+</table>

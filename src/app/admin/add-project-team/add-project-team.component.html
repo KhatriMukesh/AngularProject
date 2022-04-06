@@ -1,0 +1,27 @@
+Project Name :
+<select [(ngModel)]="projectId">
+    <option *ngFor="let p of project" value="{{p._id}}"> {{p.projectTitle}}</option>
+</select><br><br>
+
+Project Manager :
+<select [(ngModel)]="projectManager" multiple>
+    <option *ngFor="let manager of managers" value="{{manager._id}}">
+        {{manager.firstName}}
+    </option>
+</select><br><br>
+
+Developer :
+<select [(ngModel)]="developer" class="form-control" multiple>
+    <option *ngFor="let d of developers" value="{{d._id}}">
+        {{d.firstName}}
+    </option>
+</select><br><br>
+
+Tester :
+<select [(ngModel)]="tester" class="form-control" multiple>
+    <option *ngFor="let t of testers" value="{{t._id}}">
+        {{t.firstName}}
+    </option>
+</select><br><br>
+
+<button type="button" (click)="addProjectTeam()">Add Project Team</button><br><br>
