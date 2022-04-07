@@ -37,17 +37,6 @@ export class ProjectService {
 
 
 
-  getAllDeveloper():Observable<any>{
-    return this.httpClient.get("http://localhost:3000/getAllDeveloper")
-  }
-
-
-
-  getAllTester():Observable<any>{
-    return this.httpClient.get("http://localhost:3000/getAllTester")
-  }
-
-
   getAllPriority():Observable<any>{
     return this.httpClient.get("http://localhost:3000/priority")
   }
@@ -74,6 +63,10 @@ export class ProjectService {
   getModulebyproject(project:any):Observable<any>{
     return this.httpClient.get("http://localhost:3000/module/"+project)
   }
+
+
+
+  
   addTask(task:any):Observable<any>{
     return this.httpClient.post("http://localhost:3000/tasks",task)
   }
@@ -82,6 +75,23 @@ export class ProjectService {
   }
   deleteTask(taskId:any):Observable<any>{
     return this.httpClient.delete("http://localhost:3000/tasks/"+taskId)
+  }
+  getTaskById(taskId:any):Observable<any>{
+    return this.httpClient.get("http://localhost:3000/tasks/"+taskId)
+  }
+  updateTask(task:any):Observable<any>{
+    return this.httpClient.put("http://localhost:3000/tasks",task)
   } 
+
+
+  getAllDeveloper():Observable<any>{
+    return this.httpClient.get("http://localhost:3000/getAllDeveloper")
+  }
+  getAllTester():Observable<any>{
+    return this.httpClient.get("http://localhost:3000/getAllTester")
+  }
+  addProjectTeam(project:any):Observable<any>{
+    return this.httpClient.post("http://localhost:3000/projectTeam",project)
+  }
 
 }

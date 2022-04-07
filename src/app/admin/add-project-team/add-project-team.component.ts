@@ -37,8 +37,36 @@ export class AddProjectTeamComponent implements OnInit {
         this.testers = resp.data  
       })
   }
-  addProjectTeam(){
-    
+  addProjectTeam() {
+    let project = { projectId: this.projectId, }
+    console.log(this.developer);
+    console.log(this.tester);
+    console.log(this.projectManager);
+
+    for (let i = 0; i < this.developer.length; i++) {
+      this.projectService.addProjectTeam({
+        projectId: this.projectId,
+        projectTeamMember: this.developer[i]
+      })
+    }
+
+    for (let i = 0; i < this.projectManager.length; i++) {
+      this.projectService.addProjectTeam({
+        projectId: this.projectId,
+        projectTeamMember: this.projectManager[i]
+      })
+    }
+
+    for (let i = 0; i < this.tester.length; i++) {
+      this.projectService.addProjectTeam({
+        projectId: this.projectId,
+        projectTeamMember: this.tester[i]
+      })
+    }
+
+    this.router.navigateByUrl("/admin/list-project-team")
+
+     
   }
 
 }

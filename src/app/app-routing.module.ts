@@ -9,6 +9,7 @@ import { AddusersComponent } from './admin/addusers/addusers.component';
 import { AdminDashboardComponent } from './admin/admin-dashboard/admin-dashboard.component';
 import { CompletedProjectsComponent } from './admin/completed-projects/completed-projects.component';
 import { EditModulesComponent } from './admin/edit-modules/edit-modules.component';
+import { EditTasksComponent } from './admin/edit-tasks/edit-tasks.component';
 import { EditprojectsComponent } from './admin/editprojects/editprojects.component';
 import { EditrolesComponent } from './admin/editroles/editroles.component';
 import { EditusersComponent } from './admin/editusers/editusers.component';
@@ -63,6 +64,8 @@ const routes: Routes = [
   //tasks
   {path:"admin/add-tasks",component:AddTasksComponent},
   {path:"admin/list-tasks",component:ListTasksComponent},
+  {path:"admin/edit-tasks",component:EditTasksComponent},
+  {path:"admin/edit-tasks/:taskId",component:EditTasksComponent},
   
 
   //Project Teams

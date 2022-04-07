@@ -33,6 +33,7 @@ import { ListModulesComponent } from './admin/list-modules/list-modules.componen
 import { EditModulesComponent } from './admin/edit-modules/edit-modules.component';
 import { AddTasksComponent } from './admin/add-tasks/add-tasks.component';
 import { ListTasksComponent } from './admin/list-tasks/list-tasks.component';
+import { EditTasksComponent } from './admin/edit-tasks/edit-tasks.component';
 
 @NgModule({
   declarations: [
@@ -61,7 +62,8 @@ import { ListTasksComponent } from './admin/list-tasks/list-tasks.component';
     ListModulesComponent,
     EditModulesComponent,
     AddTasksComponent,
-    ListTasksComponent
+    ListTasksComponent,
+    EditTasksComponent
   ],
   imports: [
     BrowserModule,
