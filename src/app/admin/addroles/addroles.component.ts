@@ -22,7 +22,7 @@ export class AddrolesComponent implements OnInit {
       if(resp.status == 200){
         //navigate list role 
        // this.toastrService.success("",resp.msg,{timeOut:3000})
-        this.router.navigateByUrl("/admin/listrole")
+        this.router.navigateByUrl("/admin/listroles")
       }else{
 
       }

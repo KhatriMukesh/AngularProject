@@ -1,16 +1,97 @@
-<h2>Sign up</h2>
-First Name : <input  type="text" placeholder="First Name" [(ngModel)]="firstName"/><br><br>
-Email : <input type="email" placeholder="Email" [(ngModel)]="email" /><br><br>
-Role : <select [(ngModel)]="role" placeholder="Role">
-    <option value="62473b64ff3a1f2757fd9ce3">Developer</option>
-    <option value="624bc4f7c9105fb13a944f23">Tester</option>
-</select><br><br>
-<label  >Gender : &nbsp;
-    <input type="radio"  [(ngModel)]="gender" value="Male" required>&nbsp;Male
-    &nbsp;
-    <input type="radio"  [(ngModel)]="gender" value="Female" required>&nbsp;Female
-</label><br><br>
-Contact no : <input [(ngModel)]="contactNumber" placeholder="Contact Number" /><br><br>
-Password : <input class="form-control" type="password" placeholder="Password" [(ngModel)]="password"><br><br>
-<button type="submit" (click)="adduser()" >Sign Up</button><br><br>
-Already a user ? <a routerLink="/login" class="text-danger">Login</a>
+<body>
+    <div class="main-wrapper">
+        <!-- ============================================================== -->
+        <!-- Preloader - style you can find in spinners.css -->
+        <!-- ============================================================== -->
+        <div class="preloader" style="display: none;">
+            <div class="lds-ripple">
+                <div class="lds-pos"></div>
+                <div class="lds-pos"></div>
+            </div>
+        </div>
+        <!-- ============================================================== -->
+        <!-- Preloader - style you can find in spinners.css -->
+        <!-- ============================================================== -->
+        <!-- ============================================================== -->
+        <!-- Login box.scss -->
+        <!-- ============================================================== -->
+        <div class="auth-wrapper d-flex no-block justify-content-center align-items-center position-relative" style="background:url(../assets/images/big/auth-bg.jpg) no-repeat center center;">
+            <div class="auth-box row text-center">
+                <div class="col-lg-7 col-md-5 modal-bg-img" style="background-image: url(../assets/images/big/3.jpg);">
+                </div>
+                <div class="col-lg-5 col-md-7 bg-white">
+                    <div class="p-3">
+                        <img src="../assets/images/big/icon.png" alt="wrapkit">
+                        <h2 class="mt-3 text-center">Sign Up </h2>
+                        <div class="mt-4">
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <div class="form-group">
+                                        <input class="form-control" type="text" placeholder="First Name" [(ngModel)]="firstName">
+                                    </div>
+                                </div>
+                                <div class="col-lg-12">
+                                    <div class="form-group">
+                                        <input class="form-control" type="email" placeholder="Email" [(ngModel)]="email">
+                                    </div>
+                                </div>
+                                <div class="col-lg-12">
+                                    <div class="form-group">
+                                    <select class="form-control" [(ngModel)]="role" placeholder="Role">
+                                        <option value="62473b64ff3a1f2757fd9ce3">Developer</option>
+                                        <option value="624bc4f7c9105fb13a944f23">Tester</option>
+                                    </select>
+                                </div>
+                                </div>
+                                <div class="col-lg-12" >
+                                    <div class="form-group" >
+                                        <div class="form-control">
+                                            Gender : &nbsp;&nbsp;&nbsp;
+                                            <input type="radio"  [(ngModel)]="gender" value="Male" required>&nbsp;Male
+                                            &nbsp;&nbsp;
+                                            <input type="radio"  [(ngModel)]="gender" value="Female" required>&nbsp;Female
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-12">
+                                    <div class="form-group">
+                                        <input class="form-control" type="text" [(ngModel)]="contactNumber" placeholder="Contact Number">
+                                    </div>
+                                </div>
+                                <div class="col-lg-12">
+                                    <div class="form-group">
+                                        <input class="form-control" type="password" placeholder="Password" [(ngModel)]="password">
+                                    </div>
+                                </div>
+                                <div class="col-lg-12 text-center">
+                                    <button type="submit" class="btn btn-block btn-dark" (click)="adduser()">Sign Up</button>
+                                </div>
+                                <div class="col-lg-12 text-center mt-3">
+                                    Already have an account? <a routerLink="/login"  class="text-danger">Login</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- ============================================================== -->
+        <!-- Login box.scss -->
+        <!-- ============================================================== -->
+    </div>
+    <!-- ============================================================== -->
+    <!-- All Required js -->
+    <!-- ============================================================== -->
+    <script src="../assets/libs/jquery/dist/jquery.min.js "></script>
+    <!-- Bootstrap tether Core JavaScript -->
+    <script src="../assets/libs/popper.js/dist/umd/popper.min.js "></script>
+    <script src="../assets/libs/bootstrap/dist/js/bootstrap.min.js "></script>
+    <!-- ============================================================== -->
+    <!-- This page plugin js -->
+    <!-- ============================================================== -->
+    <script>
+        $(".preloader ").fadeOut();
+    </script>
+
+
+</body>

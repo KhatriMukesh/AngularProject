@@ -1,19 +1,43 @@
-<table border="1">
-    <thead>
-        <tr>
-            <th>Index</th>
-            <th>Role Name</th>
-            <th>Action</th>
-            <th>Status</th>
+
+
+<div class="card" >
+    <div class="card-body">
+        <h4 class="card-title">List Roles</h4>
+        <br>
+        <!-- <div class="card-body"> -->
+    <!-- <h2 class="card-title">List Roles</h2> -->
+    <!-- </div> -->
+<!-- <br> -->
+<!-- <h2>List Roles</h2> -->
+<div class="col-10">
+<div class="table-responsive mt">
+    <table class="table table-bordered table-responsive-lg">
+        <thead>
+            <tr>
+                <th>Index</th>
+                <th>Role Name</th>
+                <th>Action</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let role of roles, let i = index">
+            <td >{{i+1}}</td>
+            <td>{{role.roleName}}</td>
+            <td>&nbsp;&nbsp;&nbsp;
+                <button type="button" (click)="editRole(role._id)" class="btn btn-outline-success btn-rounded waves-effect">Edit Role</button> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <!-- <button type="button" (click)="editRole(role._id)" class="btn btn-primary btn-rounded waves-effect waves-light">Edit</button>  -->
+                <!-- <button type="button"  class="btn btn-primary btn-rounded waves-effect waves-light">Delete</button> -->
+                <button type="button" (click)="deleteRole(role._id)" class="btn btn-outline-danger btn-rounded waves-effect">Delete Role</button>
+            </td>
+            <!-- <td><button (click)="editRole(role._id)">Edit</button><button (click)="deleteRole(role._id)">Delete</button></td> -->
+            <!-- <td>{{role.isActive}}</td> -->
+            
+            <td>Active</td>
         </tr>
-    </thead>
-    <tbody>
-        <tr *ngFor="let role of roles, let i = index">
-        <td >{{i+1}}</td>
-        <td>{{role.roleName}}</td>
-        <td><button (click)="editRole(role._id)">Edit</button><button (click)="deleteRole(role._id)">Delete</button></td>
-        <!-- <td>{{role.isActive}}</td> -->
-        <td>Active</td>
-    </tr>
-    </tbody>
-</table>
+        </tbody>
+    </table>
+</div>
+</div>
+</div>
+</div>

@@ -34,6 +34,11 @@ import { EditModulesComponent } from './admin/edit-modules/edit-modules.componen
 import { AddTasksComponent } from './admin/add-tasks/add-tasks.component';
 import { ListTasksComponent } from './admin/list-tasks/list-tasks.component';
 import { EditTasksComponent } from './admin/edit-tasks/edit-tasks.component';
+import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
+import { AdminComponent } from './admin/admin/admin.component';
+import { AdminHeaderComponent } from './admin/admin-header/admin-header.component';
+import { AdminSidebarComponent } from './admin/admin-sidebar/admin-sidebar.component';
+import { AdminFooterComponent } from './admin/admin-footer/admin-footer.component';
 
 @NgModule({
   declarations: [
@@ -63,7 +68,12 @@ import { EditTasksComponent } from './admin/edit-tasks/edit-tasks.component';
     EditModulesComponent,
     AddTasksComponent,
     ListTasksComponent,
-    EditTasksComponent
+    EditTasksComponent,
+    ForgotPasswordComponent,
+    AdminComponent,
+    AdminHeaderComponent,
+    AdminSidebarComponent,
+    AdminFooterComponent
   ],
   imports: [
     BrowserModule,

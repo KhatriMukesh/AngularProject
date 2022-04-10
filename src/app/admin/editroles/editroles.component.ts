@@ -34,7 +34,7 @@ export class EditrolesComponent implements OnInit {
     this.roleService.updateRole(role).subscribe(resp=>{
       if(resp.status == 200){
           this.tsService.success("",resp.msg,{timeOut:3000})
-          this.router.navigateByUrl("/admin/listrole")
+          this.router.navigateByUrl("/admin/listroles")
         }else{
         this.tsService.error("",resp.msg,{timeOut:3000})
       }

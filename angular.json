@@ -28,9 +28,34 @@
             ],
             "styles": [
               "src/styles.css",
-              "node_modules/ngx-toastr/toastr.css"
+              "node_modules/ngx-toastr/toastr.css",
+              "src/assets/dist/css/style.min.css", 
+              "src/assets/extra-libs/c3/c3.min.css",
+              "src/assets/libs/chartist/dist/chartist.min.css",
+              "src/assets/extra-libs/jvector/jquery-jvectormap-2.0.2.css",
+              "src/dist/css/style.min.css"
+
+
             ],
-            "scripts": []
+            "scripts": [
+              "src/assets/libs/jquery/dist/jquery.min.js",
+              "src/assets/libs/popper.min.js",
+              "src/assets/libs/bootstrap/dist/js/bootstrap.min.js",
+              "src/dist/js/app-style-switcher.js",
+              "src/dist/js/feather.min.js",
+              "src/assets/libs/perfect-scrollbar/dist/perfect-scrollbar.jquery.min.js",
+              "src/dist/js/sidebarmenu.js",
+              "src/dist/js/custom.min.js",
+              "src/assets/extra-libs/c3/d3.min.js",
+              "src/assets/extra-libs/c3/c3.min.js",
+              "src/assets/libs/chartist/dist/chartist.min.js",
+              "src/assets/libs/chartist-plugin-tooltips/dist/chartist-plugin-tooltip.min.js",
+              "src/assets/extra-libs/jvector/jquery-jvectormap-2.0.2.min.js",
+              "src/assets/extra-libs/jvector/jquery-jvectormap-world-mill-en.js",
+              "src/dist/js/pages/dashboards/dashboard1.min.js"
+
+
+            ]
           },
           "configurations": {
             "production": {
