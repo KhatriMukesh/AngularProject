@@ -1,22 +1,95 @@
-Project Name :
-<select [(ngModel)]="projectId" id="projectName" (change)="getModulebyproject($event)">
-    <option *ngFor="let p of project" value="{{p._id}}"> {{p.projectTitle}}
-    </option>
-</select><br><br>
-Module Name :
-<select [(ngModel)]="moduleId" >
-    <option *ngFor="let m of module" value="{{m._id}}"> {{m.moduleName}}
-    </option>
-</select><br><br>
-Task Name :
-<input type="text" id="email_address_2" [(ngModel)]="taskName" placeholder="Enter Task Name"><br><br>
-Task Description :
-<textarea [(ngModel)]="description"  placeholder="Enter Task Descripation"></textarea><br><br>
-Estimate Time :
-<input type="text"  [(ngModel)]="totalTime" placeholder="Enter Estimate Time (IN Minutes)"><br><br>
-Priority :
-<select [(ngModel)]="priorityId" >
-    <option *ngFor="let p of priority" value="{{p._id}}"> {{p.priorityName}}
-    </option>
-</select><br><br>
-<button type="button" (click)="addTask()" >Add Task</button>
+<div class="card">
+    <div class="card-body">
+        <h4 class="card-title">Add Task</h4>
+        <br>
+
+
+        <div class="row clearfix">
+            <div class="col-lg-2 col-md-2 col-sm-4 form-control-label">
+                <label for="email_address_2">Project Name</label>
+            </div>
+            <div class="col-lg-10 col-md-10 col-sm-8">
+                <div class="form-group">
+                    <select [(ngModel)]="projectId" id="projectName" (change)="getModulebyproject($event)" class="form-control"> 
+                        <option *ngFor="let p of project" value="{{p._id}}"> {{p.projectTitle}}
+                        </option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="row clearfix">
+            <div class="col-lg-2 col-md-2 col-sm-4 form-control-label">
+                <label for="email_address_2">Module Name</label>
+            </div>
+            <div class="col-lg-10 col-md-10 col-sm-8">
+                <div class="form-group">
+                    <select [(ngModel)]="moduleId" class="form-control">
+                        <option *ngFor="let m of module" value="{{m._id}}"> {{m.moduleName}}
+                        </option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <div class="row clearfix">
+            <div class="col-lg-2 col-md-2 col-sm-4 form-control-label">
+                <label for="email_address_2">Task Name</label>
+            </div>
+            <div class="col-lg-10 col-md-10 col-sm-8">
+                <div class="form-group">
+                    <input type="text" id="email_address_2" [(ngModel)]="taskName" class="form-control" placeholder="Enter Task Name">
+                </div>
+            </div>
+        </div>
+        
+        <div class="row clearfix">
+            <div class="col-lg-2 col-md-2 col-sm-4 form-control-label">
+                <label for="email_address_2">Task Description</label>
+            </div>
+            <div class="col-lg-10 col-md-10 col-sm-8">
+                <div class="form-group">
+                    <textarea id="email_address_2" [(ngModel)]="description" class="form-control"
+                        class="form-control" placeholder="Enter Task Descripation"></textarea>
+                </div>
+            </div>
+        </div>
+
+        <div class="row clearfix">
+            <div class="col-lg-2 col-md-2 col-sm-4 form-control-label">
+                <label for="email_address_2">Estimate Time</label>
+            </div>
+            <div class="col-lg-10 col-md-10 col-sm-8">
+                <div class="form-group">
+                    <input type="text" id="email_address_2" [(ngModel)]="totalTime" class="form-control"
+                        placeholder="Enter Estimate Time (IN Minutes)">
+                </div>
+            </div>
+        </div>
+
+        <div class="row clearfix">
+            <div class="col-lg-2 col-md-2 col-sm-4 form-control-label">
+                <label for="email_address_2">Priority</label>
+            </div>
+            <div class="col-lg-10 col-md-10 col-sm-8">
+                <div class="form-group">
+                    <select [(ngModel)]="priorityId" class="form-control" >
+                        <option *ngFor="let p of priority" value="{{p._id}}"> {{p.priorityName}}
+                        </option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <div class="row clearfix">
+            <div class="col-sm-8 offset-sm-2">
+                <button type="button" (click)="addTask()"
+                    class="btn btn-primary btn-rounded waves-effect waves-light">Add Task</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
