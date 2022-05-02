@@ -1,14 +1,21 @@
-Project :
-<input type="text"  value="{{projectTitle}}" readonly ><br><br>
-Module Name :
-<input type="text"  [(ngModel)]="moduleName"><br><br>
-Module Description :
-<textarea type="text" [(ngModel)]="description" ></textarea><br><br>
-Module Priority :
-<select [(ngModel)]="priorityId" >
-    <option *ngFor="let p of priority" value="{{p._id}}"> {{p.priorityName}}
-    </option>
-</select><br><br>
-Estimate Hours :
-<input type="text"  [(ngModel)]="estimatedTime" ><br><br>
-<button type="button" (click)="updateModule()" >Update</button>
+<div class="page-wrapper" style="display: block;">
+<div class="card">
+    <div class="card-body">
+        <h4 class="card-title">Edit Module</h4><br>
+        <h6 class="card-subtitle"></h6>
+        <div class="form-group">
+            <input type="text" class="form-control" value="{{projectTitle}}" readonly ><br>
+            <input type="text" class="form-control" [(ngModel)]="moduleName"><br>
+            <textarea type="text" class="form-control" [(ngModel)]="description" ></textarea><br>
+            <select class="form-control" [(ngModel)]="priorityId" >
+                <option *ngFor="let p of priority" value="{{p._id}}"> {{p.priorityName}}
+                </option>
+            </select><br>
+            <input type="text" class="form-control" [(ngModel)]="estimatedTime" ><br>
+
+            <button type="button" (click)="updateModule()"
+                class="btn btn-primary btn-rounded waves-effect waves-light">update Module</button>
+        </div>
+    </div>
+</div>
+</div>

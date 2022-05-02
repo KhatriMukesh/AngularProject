@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
 import { ProjectService } from '../project.service';
-import { RoleService } from 'src/app/role.service';
 
 @Component({
   selector: 'app-listprojects',

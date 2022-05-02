@@ -1,2 +1,14 @@
-<input type="text"  [(ngModel)]="roleName"><br><br>
-<button type="button" (click)="updateRole()" >update Role</button>
+
+ <div class="page-wrapper" style="display: block;">
+ <div class="card">
+    <div class="card-body">
+        <h4 class="card-title">Edit Role</h4><br>
+        <h6 class="card-subtitle"></h6>
+        <div class="form-group">
+            <input type="text" class="form-control" [(ngModel)]="roleName"><br>
+            <button type="button" (click)="updateRole()"
+                class="btn btn-primary btn-rounded waves-effect waves-light">update Role</button>
+        </div>
+    </div>
+</div>
+</div>

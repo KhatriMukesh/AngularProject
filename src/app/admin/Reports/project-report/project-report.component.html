@@ -1,0 +1,66 @@
+
+<div class="page-wrapper" style="display: block;">
+    <div class="card">
+        <div class="card-body">
+            <h4 class="card-title">Project Reports</h4>
+            <br>
+            <div class="row clearfix">
+                <div class="col-lg-2 col-md-2 col-sm-4 form-control-label">
+                    <label for="email_address_2">Projects</label>
+                </div>
+                <div class="col-lg-10 col-md-10 col-sm-8">
+                    <div class="form-group">
+                        <select [(ngModel)]="projects" class="form-control"
+                                (change)="getprojectbyStatus($event)">
+                            <option *ngFor="let s of status" value="{{s._id}}"> {{s.statusName}}
+                            </option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-body">
+            <!-- <h4 class="card-title">Bug Report</h4> -->
+            <!-- <br> -->
+            <!-- <div class="card-body"> -->
+            <!-- <h2 class="card-title">List Roles</h2> -->
+            <!-- </div> -->
+            <!-- <br> -->
+            <!-- <h2>List Roles</h2> -->
+            <div class="col-12">
+                <div class="table-responsive mt">
+                    <table class="table table-bordered table-responsive-lg">
+                        <thead>
+                            <tr>
+                                <th>Index</th>
+                                <th>Project Name</th>
+                                <th>Project Manager</th>
+                                <th>Description</th>
+                                <th>Technology</th>
+                                <th>Estimate Hours</th>
+                                <!-- <th>Status</th> -->
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let project of projects, let i = index">
+                                <td>{{i+1}}</td>
+                                <td>{{project.projectTitle}}</td>
+                                <td>{{project.projectManagerID.firstName}}</td>
+                                <td>{{project.description}}</td>
+                                <td>{{project.technology}}</td>
+                                <td>{{project.estimatedHours}}</td>
+                                <!-- <td><button class="btn btn-primary" style="width: 100%;"
+                                        (click)="editProject(project._id)">Edit</button><button
+                                        class="btn btn-danger" style="width: 100%;"
+                                        (click)="deleteProject(project._id)">Delete</button></td>
+                                <td>{{project.statusId.statusName}}</td> -->
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,94 @@
+<div class="page-wrapper" style="display: block;">
+    <div class="card">
+        <div class="card-body">
+            <h4 class="card-title">Add User</h4>
+            <br>
+    
+    
+            <div class="row clearfix">
+                <div class="col-lg-2 col-md-2 col-sm-4 form-control-label">
+                    <label for="email_address_2">User Name</label>
+                </div>
+                <div class="col-lg-10 col-md-10 col-sm-8">
+                    <div class="form-group">
+                        <input type="text" [(ngModel)]="firstName" 
+                                            class="form-control" placeholder="Enter User Name">
+                    </div>
+                </div>
+            </div>
+    
+            <div class="row clearfix">
+                <div class="col-lg-2 col-md-2 col-sm-4 form-control-label">
+                    <label for="email_address_2">Email</label>
+                </div>
+                <div class="col-lg-10 col-md-10 col-sm-8">
+                    <div class="form-group">
+                        <input type="text" [(ngModel)]="email"  class="form-control"
+                        placeholder="Enter User Email">
+                    </div>
+                </div>
+            </div>
+    
+            
+            <div class="row clearfix">
+                <div class="col-lg-2 col-md-2 col-sm-4 form-control-label">
+                    <label for="email_address_2">Gender</label>
+                </div>
+                <div class="col-lg-10 col-md-10 col-sm-8">
+                    <div class="form-group">
+                        &nbsp;&nbsp;
+                                        <input type="radio" class="" [(ngModel)]="gender" value="Male" required>&nbsp;Male
+                                &nbsp;&nbsp;&nbsp;
+                                <input type="radio" class="" [(ngModel)]="gender" value="Female" required>&nbsp;Female
+                    </div>
+                </div>
+            </div>
+    
+            <div class="row clearfix">
+                <div class="col-lg-2 col-md-2 col-sm-4 form-control-label">
+                    <label for="email_address_2">Password</label>
+                </div>
+                <div class="col-lg-10 col-md-10 col-sm-8">
+                    <div class="form-group">
+                        <input type="password" class="form-control" [(ngModel)]="password" value="Password" placeholder="Password (default)" required>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="row clearfix">
+                <div class="col-lg-2 col-md-2 col-sm-4 form-control-label">
+                    <label for="email_address_2">Contact Number</label>
+                </div>
+                <div class="col-lg-10 col-md-10 col-sm-8">
+                    <div class="form-group">
+                        <input type="text" [(ngModel)]="contactNumber"  class="form-control"
+                                            placeholder="Enter Contact Number">
+                    </div>
+                </div>
+            </div>
+    
+            <div class="row clearfix">
+                <div class="col-lg-2 col-md-2 col-sm-4 form-control-label">
+                    <label for="email_address_2">Role</label>
+                </div>
+                <div class="col-lg-10 col-md-10 col-sm-8">
+                    <div class="form-group">
+                        <select [(ngModel)]="role" placeholder="Role" class="form-control">
+                            <option value="62473b64ff3a1f2757fd9ce3">Developer</option>
+                            <option value="624bc4f7c9105fb13a944f23">Tester</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            
+            <div class="row clearfix">
+                <div class="col-sm-8 offset-sm-2">
+                    <button type="button" (click)="adduser()"
+                        class="btn btn-primary btn-rounded waves-effect waves-light">Add User</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    

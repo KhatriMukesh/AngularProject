@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ProjectService } from 'src/app/admin/project.service';
+import { RoleService } from 'src/app/role.service';
 
 @Component({
   selector: 'app-tester-dashboard',
@@ -7,9 +9,28 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TesterDashboardComponent implements OnInit {
 
-  constructor() { }
+  users: Array<any> = []
+  bugs: Array<any> = []
+  tasks: Array<any> = []
+  pendingTasks: Array<any> = []
+  testerId: string = ""
+  firstName: string=""
+  constructor(private roleService: RoleService, private projectService: ProjectService) { }
 
   ngOnInit(): void {
+    this.firstName = localStorage.getItem("firstName") as string
+    this.testerId = localStorage.getItem('userId') as string
+
+    this.projectService.getBugforTester(this.testerId).subscribe(resp => {
+      this.bugs = resp.data.length
+    })
+    this.projectService.getTaskbyTester(this.testerId).subscribe(resp => {
+      this.tasks = resp.data.length
+    })
+    this.projectService.getPendingTaskforTester(this.testerId).subscribe(resp => {
+      this.pendingTasks = resp.data.length
+    })
+  
   }
 
 }

@@ -28,7 +28,7 @@ export class SignupComponent implements OnInit {
   }
   adduser(){
     let user = {firstName:this.firstName,email:this.email,password:this.password,role:this.role,gender:this.gender,contactNumber:this.contactNumber}
-    console.log(this.role);
+    // console.log(this.role);
     
     this.sessionService.addUser(user).subscribe(resp=>{
       if(resp.status==-1){

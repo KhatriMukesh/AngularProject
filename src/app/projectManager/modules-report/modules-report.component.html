@@ -1,0 +1,62 @@
+<div class="page-wrapper" style="display: block;">
+    <div class="card">
+        <div class="card-body">
+            <h4 class="card-title">Status</h4>
+            <h6 class="card-subtitle"><code></code></h6>
+
+            <div class="form-group">
+                <select [(ngModel)]="statusId" class="form-control"
+                                            (change)="getModulesbyStatus()">
+                                            <option *ngFor="let s of status" value="{{s._id}}"> {{s.statusName}}
+                                            </option>
+                                        </select>
+            </div>
+
+        </div>
+    </div>
+
+
+
+
+    <div class="card">
+        <div class="card-body">
+            <!-- <h4 class="card-title">Pending Projects</h4> -->
+            <br>
+            <!-- <div class="card-body"> -->
+            <!-- <h2 class="card-title">List Roles</h2> -->
+            <!-- </div> -->
+            <!-- <br> -->
+            <!-- <h2>List Roles</h2> -->
+            <div class="col-12">
+                <div class="table-responsive mt">
+                    <table class="table table-bordered table-responsive-lg">
+                        <thead>
+                            <tr>
+                                <td>Project Name</td>
+                                <td>Module Name</td>
+                                <td>Description</td>
+                                <td>priority</td>
+                                <td>Estimated Hours</td>
+                                <td>Status</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let module of modules">
+                                <td>{{module.projectId.projectTitle}}</td>
+                                <td>{{module.moduleName}}</td>
+                                <td>{{module.description}}</td>
+                                <td>{{module.priorityId.priorityName}}</td>
+                                <td>{{module.estimatedTime}}</td>
+                                <!-- <td><button class="btn btn-primary" style="width: 100%;"
+                                    (click)="editTask(task._id)">Edit</button><button
+                                    class="btn btn-danger" style="width: 100%;"
+                                    (click)="deleteTask(task._id)">Delete</button></td> -->
+                                    <td>{{module.statusId.statusName}}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> 

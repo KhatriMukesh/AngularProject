@@ -17,6 +17,7 @@ export class AddProjectTeamComponent implements OnInit {
   projectManager:Array<any>=[]
   developer:Array<any>=[]
   tester:Array<any>=[]
+  role: string = ""
 
   managers: Array<any> = []
   developers:Array<any>=[]
@@ -27,7 +28,7 @@ export class AddProjectTeamComponent implements OnInit {
     this.projectService.getAllProject().subscribe(resp => {
       this.project = resp.data
     })  
-    this.projectService.getAllManager().subscribe(resp => {
+    this.projectService.getAllManagers().subscribe(resp => {
         this.managers = resp.data  
       })
       this.projectService.getAllDeveloper().subscribe(resp => {
@@ -38,7 +39,6 @@ export class AddProjectTeamComponent implements OnInit {
       })
   }
   addProjectTeam() {
-    let project = { projectId: this.projectId, }
     console.log(this.developer);
     console.log(this.tester);
     console.log(this.projectManager);
@@ -46,22 +46,25 @@ export class AddProjectTeamComponent implements OnInit {
     for (let i = 0; i < this.developer.length; i++) {
       this.projectService.addProjectTeam({
         projectId: this.projectId,
-        projectTeamMember: this.developer[i]
-      })
+        projectTeamMember: this.developer[i],
+        role : "62473b64ff3a1f2757fd9ce3"
+      }).subscribe()
     }
 
     for (let i = 0; i < this.projectManager.length; i++) {
       this.projectService.addProjectTeam({
         projectId: this.projectId,
-        projectTeamMember: this.projectManager[i]
-      })
+        projectTeamMember: this.projectManager[i],
+        role: "62473b5dff3a1f2757fd9ce1"
+      }).subscribe()
     }
 
     for (let i = 0; i < this.tester.length; i++) {
       this.projectService.addProjectTeam({
         projectId: this.projectId,
-        projectTeamMember: this.tester[i]
-      })
+        projectTeamMember: this.tester[i],
+        role: "624bc4f7c9105fb13a944f23"
+      }).subscribe()
     }
 
     this.router.navigateByUrl("/admin/list-project-team")

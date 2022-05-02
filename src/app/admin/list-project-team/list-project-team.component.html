@@ -1,4 +1,4 @@
- <table border="1">
+<!-- <table border="1">
     <thead>
         <tr>
             <th>Index</th>
@@ -27,3 +27,75 @@
     </tr>
 </tbody>
 </table>
+
+ -->
+
+<div class="page-wrapper" style="display: block;">
+    <div class="card">
+        <div class="card-body">
+            <h4 class="card-title">Project</h4>
+            <div class="col-12">
+                <div class="table-responsive mt">
+                    <select [(ngModel)]="projectId" class="form-control" (change)="getProjectTeambyProject()">
+                        <option *ngFor="let p of projects" value="{{p._id}}"> {{p.projectTitle}}
+                        </option>
+                    </select>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="card">
+        <div class="card-body">
+            <div class="row clearfix">
+                <!-- button -->
+                <div class="col-sm-8 offset-sm-2">
+                    <button type="button" (click)="addMemberTeam()"
+                        class="btn btn-raised btn-primary btn-round waves-effect" style="width: 100%;">Add
+                        Team-Member</button>
+                </div>
+            </div>
+            <br>
+            <div class="col-12">
+                <div class="table-responsive mt">
+                    <table class="table table-bordered table-responsive-lg">
+                        <thead>
+                            <tr>
+                                <th>Index</th>
+                                <th>User Name</th>
+                                <th>Role</th>
+                                <th>Status</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let p of projectTeam, let i = index">
+                                <td>{{i+1}}</td>
+                                    <!-- <td>{{p.projectId.projectTitle}}</td> -->
+                                    <td>{{p.projectTeamMember.firstName}}</td>
+                                    <td>{{p.role.roleName}}</td>
+                                    <td>{{p.projectTeamStatus==true?'active':'inactive'}}</td>
+                                <td>
+                                    <button type="button" (click)="action(p._id)"
+                                        class="btn btn-outline-success btn-rounded waves-effect">{{p.projectTeamStatus==true?'Revoke':'ReAssign'}}</button>
+                                    &nbsp;&nbsp;&nbsp;
+                                    <!-- <button type="button" (click)="editRole(role._id)" class="btn btn-primary btn-rounded waves-effect waves-light">Edit</button>  -->
+                                    <!-- <button type="button"  class="btn btn-primary btn-rounded waves-effect waves-light">Delete</button> -->
+                                    <button type="button" (click)="assignTask(p.projectTeamMember)"
+                                        class="btn btn-outline-danger btn-rounded waves-effect">Assign Task</button>
+                                </td>
+                                <!-- <td><button (click)="editRole(role._id)">Edit</button><button (click)="deleteRole(role._id)">Delete</button></td> -->
+                                <!-- <td>{{role.isActive}}</td> -->
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+

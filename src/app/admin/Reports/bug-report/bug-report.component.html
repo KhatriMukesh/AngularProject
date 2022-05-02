@@ -1,0 +1,82 @@
+<div class="page-wrapper" style="display: block;">
+    <div class="card">
+        <div class="card-body">
+            <h4 class="card-title">Bug Report</h4>
+            <br>
+            <div class="row clearfix">
+                <div class="col-lg-2 col-md-2 col-sm-4 form-control-label">
+                    <label for="email_address_2">Status</label>
+                </div>
+                <div class="col-lg-10 col-md-10 col-sm-8">
+                    <div class="form-group">
+                        <select [(ngModel)]="statusId" class="form-control" (change)="getBugbystatus()">
+                            <option *ngFor="let s of status" value="{{s._id}}"> {{s.statusName}}
+                            </option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-body">
+            <!-- <h4 class="card-title">Bug Report</h4> -->
+            <!-- <br> -->
+            <!-- <div class="card-body"> -->
+            <!-- <h2 class="card-title">List Roles</h2> -->
+            <!-- </div> -->
+            <!-- <br> -->
+            <!-- <h2>List Roles</h2> -->
+            <div class="col-12">
+                <div class="table-responsive mt">
+                    <table class="table table-bordered table-responsive-lg">
+                        <thead>
+                            <tr>
+                                <th>Project Name</th>
+                                <th>Moduel Name</th>
+                                <th>Task Name</th>
+                                <th>Description</th>
+                                <th>Priority</th>
+                                <th>Estimate Hours</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let bug of bugs">
+                                <td>{{bug.projectId.projectTitle}}</td>
+                                <td>{{bug.moduleId.moduleName}}</td>
+                                <td>{{bug.taskName}}</td>
+                                <td>{{bug.description}}</td>
+                                <td>{{bug.priorityId.priorityName}}</td>
+                                <td>{{bug.totalTime}}</td>
+                                <!-- <td><button class="btn btn-primary" style="width: 100%;"
+                                        (click)="editTask(task._id)">Edit</button><button
+                                        class="btn btn-danger" style="width: 100%;"
+                                        (click)="deleteTask(task._id)">Delete</button></td> -->
+                                <td>{{bug.statusId.statusName}}</td>
+                            </tr>
+                        </tbody>
+                        <!-- <tbody>
+                            <tr *ngFor="let role of roles, let i = index">
+                                <td>{{i+1}}</td>
+                                <td>{{role.roleName}}</td>
+                                <td>
+                                    <button type="button" (click)="editRole(role._id)"
+                                        class="btn btn-outline-success btn-rounded waves-effect">Edit Role</button>
+                                    &nbsp;&nbsp;&nbsp;
+                                    <!-- <button type="button" (click)="editRole(role._id)" class="btn btn-primary btn-rounded waves-effect waves-light">Edit</button>  
+                                    <!-- <button type="button"  class="btn btn-primary btn-rounded waves-effect waves-light">Delete</button>
+                                    <button type="button"  (click)="changeStatus(role._id)"
+                                        class="btn btn-outline-danger btn-rounded waves-effect">{{role.isActive==true?'Disable':'Active'}}</button>
+                                </td>
+                                <!-- <td><button (click)="editRole(role._id)">Edit</button><button (click)="deleteRole(role._id)">Delete</button></td> 
+                                <!-- <td>{{role.isActive}}</td> 
+                                <td>{{role.isActive==true?'Activate':'Inactive'}}</td>
+                            </tr>
+                        </tbody> -->
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

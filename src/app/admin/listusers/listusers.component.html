@@ -1,3 +1,4 @@
+<div class="page-wrapper" style="display: block;">
 <div class="card" >
     <div class="card-body">
         <h4 class="card-title">List Users</h4>
@@ -31,8 +32,8 @@
             <td>{{user.contactNumber}}</td>
             <td>{{user.role.roleName}}</td>
             <!-- <td>{{user.status}}</td> -->
-            <td>&nbsp;&nbsp;&nbsp;
-                <!-- <button type="button" (click)="disableUser(user._id)" class="btn btn-outline-success btn-rounded waves-effect">Disable User</button> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -->
+            <td>
+                <button type="button" (click)="disableUser(user._id)" class="btn btn-outline-success btn-rounded waves-effect">Disable User</button> 
                 <!-- <button type="button" (click)="disableUser(user._id)" class="btn btn-primary btn-rounded waves-effect waves-light">Disable User</button>  -->
                 <!-- <button type="button"  class="btn btn-primary btn-rounded waves-effect waves-light">Delete</button> -->
                 <button type="button" (click)="deleteUser(user._id)" class="btn btn-outline-danger btn-rounded waves-effect">Delete User</button>
@@ -44,6 +45,7 @@
         </tr>
         </tbody>
     </table>
+</div>
 </div>
 </div>
 </div>

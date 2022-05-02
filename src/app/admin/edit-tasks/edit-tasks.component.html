@@ -1,10 +1,21 @@
-Project Name : <input type="text"  value="{{projectTitle}}" readonly><br><br>
-Module Name : <input type="text"  value="{{moduleName}}" readonly><br><br>
-Task Name : <input type="text"  [(ngModel)]="taskName"><br><br>
-Task Description : <textarea [(ngModel)]="description" ></textarea><br><br>
-Task Priority : <select [(ngModel)]="priorityId" >
-    <option *ngFor="let p of priority" value="{{p._id}}"> {{p.priorityName}}
-    </option>
-</select><br><br>
-Estimate Hours : <input type="text" [(ngModel)]="totalTime" ><br><br>
-<button type="button" (click)="updateTask()">Update</button>
+<div class="page-wrapper" style="display: block;">
+<div class="card">
+    <div class="card-body">
+        <h4 class="card-title">Edit Task</h4><br>
+        <h6 class="card-subtitle"></h6>
+        <div class="form-group">
+            <input type="text" class="form-control" value="{{projectTitle}}" readonly><br>
+            <input type="text" class="form-control" value="{{moduleName}}" readonly><br>
+            <input type="text" class="form-control" [(ngModel)]="taskName"><br>
+            <textarea class="form-control" [(ngModel)]="description" ></textarea><br>
+            <select class="form-control" [(ngModel)]="priorityId" >
+                <option *ngFor="let p of priority" value="{{p._id}}"> {{p.priorityName}}
+                </option>
+            </select><br>
+            <input class="form-control" type="text" [(ngModel)]="totalTime" ><br>
+            <button type="button" (click)="updateTask()"
+                class="btn btn-primary btn-rounded waves-effect waves-light">update Task</button>
+        </div>
+    </div>
+</div>
+</div>

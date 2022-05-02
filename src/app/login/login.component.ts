@@ -32,7 +32,7 @@ export class LoginComponent implements OnInit {
         if (resp.data.role.roleName.toLowerCase() == "admin") {
           this.router.navigateByUrl("/admin/admin-dashboard")
         } else if (resp.data.role.roleName.toLowerCase() == "project manager") {
-          this.router.navigateByUrl("/projectManager/projectManager-dashboard")
+          this.router.navigateByUrl("/project-manager/project-manager-dashboard")
         } else if (resp.data.role.roleName.toLowerCase() == "tester") {
           this.router.navigateByUrl("/tester/tester-dashboard")
         } else if (resp.data.role.roleName.toLowerCase() == "developer") {

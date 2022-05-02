@@ -1,0 +1,77 @@
+<div class="page-wrapper" style="display: block;">
+
+
+
+
+    <div class="card">
+        <div class="card-body">
+            <h4 class="card-title">Project</h4>
+            <h6 class="card-subtitle"><code></code></h6>
+
+            <div class="form-group">
+                <select [(ngModel)]="projectId" class="form-control" (change)="getTaskbyProject()">
+                    <option *ngFor="let p of projects" value="{{p._id}}"> {{p.projectTitle}}
+                    </option>
+                </select>
+            </div>
+
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+    <div class="card">
+        <div class="card-body">
+            <h4 class="card-title">List Modules</h4>
+            <br>
+            <!-- <div class="card-body"> -->
+            <!-- <h2 class="card-title">List Roles</h2> -->
+            <!-- </div> -->
+            <!-- <br> -->
+            <!-- <h2>List Roles</h2> -->
+            <div class="col-12">
+                <div class="table-responsive mt">
+                    <table class="table table-bordered table-responsive-lg">
+                        <thead>
+                            <tr>
+                                <th>Project Name</th>
+                                <th>Module Name</th>
+                                <th>Description</th>
+                                <th>Priority</th>
+                                <th>Estimated Hours</th>
+                                <th>Actions</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let module of modules">
+                                <td>{{module.projectId.projectTitle}}</td>
+                                <td>{{module.moduleName}}</td>
+                                <td>{{module.description}}</td>
+                                <td>{{module.priorityId.priorityName}}</td>
+                                <td>{{module.estimatedTime}}</td>
+                                <td>
+                                    <button type="button" (click)="editModule(module._id)"
+                                        class="btn btn-outline-success btn-rounded waves-effect">Edit Module</button>
+                                    <!-- <button type="button" (click)="editRole(role._id)" class="btn btn-primary btn-rounded waves-effect waves-light">Edit</button>  -->
+                                    <!-- <button type="button"  class="btn btn-primary btn-rounded waves-effect waves-light">Delete</button> -->
+                                    <button type="button" (click)="deleteModule(module._id)"
+                                        class="btn btn-outline-danger btn-rounded waves-effect">Delete Module</button>
+                                </td>
+                                <!-- <td><button (click)="editRole(role._id)">Edit</button><button (click)="deleteRole(role._id)">Delete</button></td> -->
+                                <!-- <td>{{role.isActive}}</td> -->
+
+                                <td>{{module.statusId.statusName}}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

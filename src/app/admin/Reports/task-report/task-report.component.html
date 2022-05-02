@@ -1,0 +1,81 @@
+
+<div class="page-wrapper" style="display: block;">
+    <div class="card">
+        <div class="card-body">
+            <h4 class="card-title">Task Reports</h4>
+            <br>
+            <div class="row clearfix">
+                <div class="col-lg-2 col-md-2 col-sm-4 form-control-label">
+                    <label for="email_address_2">Projects</label>
+                </div>
+                <div class="col-lg-10 col-md-10 col-sm-8">
+                    <div class="form-group">
+                        <select [(ngModel)]="projectId" class="form-control"
+                                            (change)="getTaskbyProject()">
+                                            <option *ngFor="let p of projects" value="{{p._id}}"> {{p.projectTitle}}
+                                            </option>
+                                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="row clearfix">
+                <div class="col-lg-2 col-md-2 col-sm-4 form-control-label">
+                    <label for="email_address_2">Status</label>
+                </div>
+                <div class="col-lg-10 col-md-10 col-sm-8">
+                    <div class="form-group">
+                        <select [(ngModel)]="statusId" class="form-control" (change)="getTaskbyProject()">
+                            <option *ngFor="let s of status" value="{{s._id}}"> {{s.statusName}}
+                            </option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="card-body">
+            <!-- <h4 class="card-title">Bug Report</h4> -->
+            <!-- <br> -->
+            <!-- <div class="card-body"> -->
+            <!-- <h2 class="card-title">List Roles</h2> -->
+            <!-- </div> -->
+            <!-- <br> -->
+            <!-- <h2>List Roles</h2> -->
+            <div class="col-12">
+                <div class="table-responsive mt">
+                    <table class="table table-bordered table-responsive-lg">
+                        <thead>
+                            <tr>
+                                <!-- <th>Index</th> -->
+                                <th>Project Name</th>
+                                <th>Module Name</th>
+                                <th>Task Name</th>
+                                <th>Description</th>
+                                <th>Priority</th>
+                                <th>Estimate Hours</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let task of tasks">
+                                <td>{{task.projectId.projectTitle}}</td>
+                                <td>{{task.moduleId.moduleName}}</td>
+                                <td>{{task.taskName}}</td>
+                                <td>{{task.description}}</td>
+                                <td>{{task.priorityId.priorityName}}</td>
+                                <td>{{task.totalTime}}</td>
+                                <!-- <td><button class="btn btn-primary" style="width: 100%;"
+                                        (click)="editTask(task._id)">Edit</button><button
+                                        class="btn btn-danger" style="width: 100%;"
+                                        (click)="deleteTask(task._id)">Delete</button></td> -->
+                                <td>{{task.statusId.statusName}}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

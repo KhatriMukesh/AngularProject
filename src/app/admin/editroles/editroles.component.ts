@@ -16,7 +16,7 @@ export class EditrolesComponent implements OnInit {
   ngOnInit(): void {
     this.roleId = this.activatedRoute.snapshot.params['roleId']    
     this.getRoleByRoleId() 
-    console.log(this.getRoleByRoleId);
+    // console.log(this.getRoleByRoleId);
     
   }
   getRoleByRoleId(){

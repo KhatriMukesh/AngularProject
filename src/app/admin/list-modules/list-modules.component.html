@@ -1,3 +1,4 @@
+<div class="page-wrapper" style="display: block;">
 <div class="card" >
     <div class="card-body">
         <h4 class="card-title">List Modules</h4>
@@ -28,11 +29,11 @@
                 <td>{{module.description}}</td>
                 <td>{{module.priorityId.priorityName}}</td>
                 <td>{{module.estimatedTime}}</td>
-            <td>&nbsp;&nbsp;&nbsp;
-                <button type="button" (click)="editModule(module._id)" class="btn btn-outline-success btn-rounded waves-effect">Edit Role</button> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <td>
+                <button type="button" (click)="editModule(module._id)" class="btn btn-outline-success btn-rounded waves-effect">Edit Module</button> 
                 <!-- <button type="button" (click)="editRole(role._id)" class="btn btn-primary btn-rounded waves-effect waves-light">Edit</button>  -->
                 <!-- <button type="button"  class="btn btn-primary btn-rounded waves-effect waves-light">Delete</button> -->
-                <button type="button" (click)="deleteModule(module._id)" class="btn btn-outline-danger btn-rounded waves-effect">Delete Role</button>
+                <button type="button" (click)="deleteModule(module._id)" class="btn btn-outline-danger btn-rounded waves-effect">Delete Module</button>
             </td>
             <!-- <td><button (click)="editRole(role._id)">Edit</button><button (click)="deleteRole(role._id)">Delete</button></td> -->
             <!-- <td>{{role.isActive}}</td> -->
@@ -41,6 +42,7 @@
         </tr>
         </tbody>
     </table>
+</div>
 </div>
 </div>
 </div>

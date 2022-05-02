@@ -1,12 +1,21 @@
-<input type="text"  [(ngModel)]="projectTitle" ><br><br>
-<textarea [(ngModel)]="projectDescription"></textarea><br><br>
-<input type="text"  [(ngModel)]="projectTechnology"><br><br>
-<select [(ngModel)]="projectManager" >
-    <option *ngFor="let manager of managers" value="{{manager._id}}">
-        {{manager.firstName}}
-    </option>
-</select><br><br>
-<input type="text" [(ngModel)]="estimateHours" ><br><br>
-<button type="button" (click)="updateProject()">Update</button><br><br>
-
-
+<div class="page-wrapper" style="display: block;">
+<div class="card">
+    <div class="card-body">
+        <h4 class="card-title">Edit Project</h4><br>
+        <h6 class="card-subtitle"></h6>
+        <div class="form-group">
+            <input type="text" class="form-control" [(ngModel)]="projectTitle" readonly ><br>
+            <textarea class="form-control" [(ngModel)]="projectDescription"></textarea><br>
+            <input type="text" class="form-control" [(ngModel)]="projectTechnology"><br>
+            <select class="form-control" [(ngModel)]="projectManager">
+                <option *ngFor="let manager of managers" value="{{manager._id}}">
+                    {{manager.firstName}}
+                </option>
+            </select><br>
+            <input type="text" class="form-control" [(ngModel)]="estimateHours"><br>
+            <button type="button" (click)="updateProject()"
+                class="btn btn-primary btn-rounded waves-effect waves-light">update Project</button>
+        </div>
+    </div>
+</div>
+</div>

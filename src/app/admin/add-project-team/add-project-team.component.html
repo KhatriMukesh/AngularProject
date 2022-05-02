@@ -1,28 +1,82 @@
-Project Name :
-<select [(ngModel)]="projectId">
-    <option *ngFor="let p of project" value="{{p._id}}"> {{p.projectTitle}}</option>
-</select><br><br>
+<div class="page-wrapper" style="display: block;">
 
-Project Manager :
-<select [(ngModel)]="projectManager" multiple>
-    <option *ngFor="let manager of managers" value="{{manager._id}}">
-        {{manager.firstName}}
-    </option>
-</select><br><br>
+    
+        <div class="card" >
+        <div class="card-body">
+            <h4 class="card-title">Project Name</h4>
+            <h6 class="card-subtitle"><code></code></h6>
+           
+                <div class="form-group">
+                    <select [(ngModel)]="projectId" class="form-control">
+                        <option *ngFor="let p of project" value="{{p._id}}"> {{p.projectTitle}}
+                        </option>
+                    </select>
+                </div>
+           
+        </div>
+        </div>
+       
+    <div class="card">
+        <div class="card-body">
+            <h4 class="card-title"></h4>
+            <br>
+            
+            <div class="row clearfix">
+                <div class="col-lg-2 col-md-2 col-sm-4 form-control-label">
+                    <label for="email_address_2">Project Manager</label>
+                </div>
+                <div class="col-lg-10 col-md-10 col-sm-8">
+                    <div class="form-group">
+                        <select [(ngModel)]="projectManager" class="form-control" multiple>
+                            <option *ngFor="let manager of managers" value="{{manager._id}}">
+                                {{manager.firstName}}
+                            </option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="row clearfix">
+                <div class="col-lg-2 col-md-2 col-sm-4 form-control-label">
+                    <label for="email_address_2">Developer</label>
+                </div>
+                <div class="col-lg-10 col-md-10 col-sm-8">
+                    <div class="form-group">
+                        <select [(ngModel)]="developer" class="form-control" multiple>
+                            <option *ngFor="let d of developers" value="{{d._id}}">
+                                {{d.firstName}}
+                            </option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="row clearfix">
+                <div class="col-lg-2 col-md-2 col-sm-4 form-control-label">
+                    <label for="email_address_2">Tester</label>
+                </div>
+                <div class="col-lg-10 col-md-10 col-sm-8">
+                    <div class="form-group">
+                        <select [(ngModel)]="tester" class="form-control" multiple>
+                            <option *ngFor="let t of testers" value="{{t._id}}">
+                                {{t.firstName}}
+                            </option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="row clearfix">
+                <div class="col-sm-8 offset-sm-2">
+                    <button type="button" (click)="addProjectTeam()"
+                        class="btn btn-primary btn-rounded waves-effect waves-light">Add Project Team</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+     
 
-Developer :
-<select [(ngModel)]="developer" class="form-control" multiple>
-    <option *ngFor="let d of developers" value="{{d._id}}">
-        {{d.firstName}}
-    </option>
-</select><br><br>
 
-Tester :
-<select [(ngModel)]="tester" class="form-control" multiple>
-    <option *ngFor="let t of testers" value="{{t._id}}">
-        {{t.firstName}}
-    </option>
-</select><br><br>
 
-<button type="button" (click)="addProjectTeam()">Add Project Team</button><br><br>
-
+  

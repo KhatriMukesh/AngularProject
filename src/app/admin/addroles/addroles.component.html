@@ -1,12 +1,15 @@
-<div class="card" >
-<div class="card-body">
-    <h4 class="card-title">Add Role</h4>
-    <h6 class="card-subtitle"><code></code></h6>
-    <form class="mt-4">
-        <div class="form-group">
-            <input type="text" class="form-control" [(ngModel)]="roleName" placeholder="Role Name"><br>
-            <button type="button" (click)="addRole()" class="btn btn-primary btn-rounded waves-effect waves-light">Add Roles</button>
+<div class="page-wrapper" style="display: block;">
+    <div class="card">
+        <div class="card-body">
+            <h4 class="card-title">Add Role</h4>
+            <h6 class="card-subtitle"><code></code></h6>
+
+            <div class="form-group">
+                <input type="text" class="form-control" [(ngModel)]="roleName" placeholder="Role Name"><br>
+                <button type="button" (click)="addRole()"
+                    class="btn btn-primary btn-rounded waves-effect waves-light">Add Roles</button>
+            </div>
+
         </div>
-    </form>
-</div>
+    </div>
 </div>

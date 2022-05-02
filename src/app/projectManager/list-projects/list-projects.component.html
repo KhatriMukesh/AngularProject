@@ -1,0 +1,56 @@
+
+
+<div class="page-wrapper" style="display: block;">
+    <div class="card">
+        <div class="card-body">
+            <h4 class="card-title">List Projects</h4>
+            <br>
+            <!-- <div class="card-body"> -->
+            <!-- <h2 class="card-title">List Roles</h2> -->
+            <!-- </div> -->
+            <!-- <br> -->
+            <!-- <h2>List Roles</h2> -->
+            <div class="col-12">
+                <div class="table-responsive mt">
+                    <table class="table table-bordered table-responsive-lg">
+                        <thead>
+                            <tr>
+                                <th>Index</th>
+                                <th>Project Name</th>
+                                <th>Project Manager</th>
+                                <th>Project Description</th>
+                                <th>Project Technology</th>
+                                <th>Estimated Hours</th>
+                                <th>Actions</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let project of projects, let i = index">
+                                <td>{{i+1}}</td>
+                                <td>{{project.projectTitle}}</td>
+                                <td>{{project.projectManagerID.firstName}}</td>
+                                <td>{{project.description}}</td>
+                                <td>{{project.technology}}</td>
+                                <td>{{project.estimatedHours}}</td>
+                                <td>
+                                    <button type="button" (click)="editProject(project._id)"
+                                        class="btn btn-outline-success btn-rounded waves-effect">Edit Project</button>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                    <!-- <button (click)="editProject(project._id)">Edit</button> -->
+                                    <button type="button" (click)="deleteProject(project._id)"
+                                        class="btn btn-outline-danger btn-rounded waves-effect">Delete Project</button>
+                                    <!-- <button (click)="deleteProject(project._id)">Delete</button> -->
+                                    <button style="width: 100%;"
+                                    class="btn btn-outline-info btn-rounded waves-effect"
+                                                            (click)="ViewTeam(project._id)">View Team</button>
+                                </td>
+                                <td>{{project.statusId?.statusName}}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

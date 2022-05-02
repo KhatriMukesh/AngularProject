@@ -1,0 +1,84 @@
+<!-- <aside id="leftsidebar" class="sidebar">
+    <div class="navbar-brand">
+        <button class="btn-menu ls-toggle-btn" type="button"><i class="zmdi zmdi-menu"></i></button>
+        <a routerLink="/admin/admin-dashboard"><img src="assets/images/BS_Logo.png" width="50" alt="BugTracking"><span
+                class="m-l-10">BugTracking</span></a>
+    </div>
+    <div class="menu">
+        <div class="slimScrollDiv" style="position: relative; width: auto; height: calc(100vh - 65px);">
+            <ul class="list" style="overflow: auto; width: auto; height: calc(100vh - 65px);">
+                <li>
+                    <div class="user-info">
+                        <a class="image waves-effect waves-block"><img src="./assets/images/profile_av.jpg"></a>
+                        <div class="detail">
+                            <h6>&nbsp;{{firstName}}</h6>
+                            <small>Tester</small>
+                        </div>
+                    </div>
+                </li>
+                <li class="open"><a routerLink="/tester/tester-dashboard" class="toggled waves-effect waves-block"><i
+                            class="zmdi zmdi-home"></i><span>Dashboard</span></a></li>
+                            <li> <a class=" waves-effect" routerLink="/tester/list-all-task"><i
+                                class="zmdi zmdi-assignment"></i><span>Tasks</span></a>
+                    </li>
+                <li> <a class="menu-toggle waves-effect waves-block"><i
+                            class="zmdi zmdi-assignment"></i><span>Bug</span></a>
+                    <ul class="ml-menu">
+                        <li><a routerLink="/tester/add-bug" class=" waves-effect waves-block">Add Bug</a></li>
+                        <li><a routerLink="/tester/list-bug" class=" waves-effect waves-block">List Bug</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <div class="slimScrollBar"
+                style="background: rgb(238, 238, 238); width: 1px; position: absolute; top: 0px; opacity: 0.4; display: block; border-radius: 3px; z-index: 99; right: 1px; height: 356.89px;">
+            </div>
+            <div class="slimScrollRail"
+                style="width: 1px; height: 100%; position: absolute; top: 0px; display: none; border-radius: 0px; background: rgb(51, 51, 51); opacity: 0.2; z-index: 90; right: 1px;">
+            </div>
+        </div>
+    </div>
+</aside>
+ -->
+
+
+<div id="main-wrapper" data-theme="light" data-layout="vertical" data-navbarbg="skin6" data-sidebartype="full" data-sidebar-position="fixed" data-header-position="fixed" data-footer-position="fixed" data-boxed-layout="full">
+    <!-- Left Sidebar - style you can find in sidebar.scss  -->
+            <!-- ============================================================== -->
+            <aside class="left-sidebar" data-sidebarbg="skin6">
+                <!-- Sidebar scroll-->
+                <div class="scroll-sidebar ps-container ps-theme-default ps-active-y" data-sidebarbg="skin6" data-ps-id="e2387d54-f1df-d850-66d5-3759e3140976">
+                    <!-- Sidebar navigation-->
+                    <nav class="sidebar-nav">
+                        <ul id="sidebarnav" class="in">
+                            <li class="sidebar-item selected"> <a class="sidebar-link sidebar-link active" routerLink="/tester/tester-dashboard" aria-expanded="false"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-home feather-icon"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg><span class="hide-menu">Dashboard</span></a></li>
+    
+                            <li class="list-divider"></li>
+                            <!-- <li class="nav-small-cap"><span class="hide-menu">Components</span></li> -->
+
+                            
+                            <li class="sidebar-item"><a routerLink="/tester/list-all-task" class="sidebar-link"><span class="hide-menu"> Tasks
+                            </span></a>
+                            </li>
+                            
+                            <li class="sidebar-item"> <a class="sidebar-link has-arrow" href="javascript:void(0)" aria-expanded="false"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-grid feather-icon"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg><span class="hide-menu"> Bug </span></a>
+                                <ul aria-expanded="false" class="collapse  first-level base-level-line">
+                                    <li class="sidebar-item"><a routerLink="/tester/add-bug" class="sidebar-link"><span class="hide-menu"> Add Bug
+                                            </span></a>
+                                    </li>
+                                    <li class="sidebar-item"><a routerLink="/tester/list-bug" class="sidebar-link"><span class="hide-menu"> List Bug
+                                            </span></a>
+                                    </li>
+                                    </ul>
+                            </li>
+                            
+    
+                            
+                        </ul>
+                    </nav>
+                    <!-- End Sidebar navigation -->
+                <div class="ps-scrollbar-x-rail" style="left: 0px; bottom: -178px;"><div class="ps-scrollbar-x" tabindex="0" style="left: 0px; width: 0px;"></div></div><div class="ps-scrollbar-y-rail" style="top: 178px; height: 388px; right: 3px;"><div class="ps-scrollbar-y" tabindex="0" style="top: 65px; height: 142px;"></div></div></div>
+                <!-- End Sidebar scroll-->
+            </aside>
+            <!-- ============================================================== -->
+            <!-- End Left Sidebar - style you can find in sidebar.scss  -->
+        </div>

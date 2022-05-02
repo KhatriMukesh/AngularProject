@@ -10,23 +10,23 @@ import { RoleService } from 'src/app/role.service';
 })
 export class AddrolesComponent implements OnInit {
 
-  constructor(private roleService:RoleService,private router:Router,private toastrService:ToastrService) { }
-  roleName:string =""
+  constructor(private roleService: RoleService, private router: Router, private toastrService: ToastrService) { }
+  roleName: string = ""
 
   ngOnInit(): void {
   }
-  addRole(){
-    let role = {roleName:this.roleName} 
-    this.roleService.addRole(role).subscribe(resp=>{
+  addRole() {
+    let role = { roleName: this.roleName }
+    this.roleService.addRole(role).subscribe(resp => {
       //console.log(resp);
-      if(resp.status == 200){
+      if (resp.status == 200) {
         //navigate list role 
-       // this.toastrService.success("",resp.msg,{timeOut:3000})
+        // this.toastrService.success("",resp.msg,{timeOut:3000})
         this.router.navigateByUrl("/admin/listroles")
-      }else{
+      } else {
 
       }
-      
+
     })
 
   }

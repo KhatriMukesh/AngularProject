@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Observable, observable } from 'rxjs';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -19,6 +19,9 @@ export class RoleService {
   }
   getAllRoles(): Observable<any> {
     return this.httpClient.get("http://localhost:3000/roles")
+  }
+  changeStatus(roleId: any): Observable<any> {
+    return this.httpClient.get("http://localhost:3000/roleStatus/" + roleId)
   }
   deleteRole(roleId: any): Observable<any> {
     return this.httpClient.delete("http://localhost:3000/roles/" + roleId)
@@ -41,6 +44,9 @@ export class RoleService {
   disableUser(user: any): Observable<any> {
     return this.httpClient.post("http://localhost:3000/disableuser", user)
   }
+  getuserName(userId: any): Observable<any> {
+    return this.httpClient.get("http://localhost:3000/getuserName/" +userId)
+  }
 
 
 
@@ -50,5 +56,50 @@ export class RoleService {
   getPendingUsers(): Observable<any> {
     return this.httpClient.get("http://localhost:3000/pendingusers")
   }
+  getUsersById(userId: any): Observable<any> {
+    return this.httpClient.get("http://localhost:3000/getUsersById/" +userId)
+  }
+  updatePassword(password: any): Observable<any> {
+    return this.httpClient.put("http://localhost:3000/changePassword", password)
+  }
+  getAllBugStatus(): Observable<any> {
+    return this.httpClient.get("http://localhost:3000/bugStatus")
+  }
+
+  
+  getAllStatus(): Observable<any> {
+    return this.httpClient.get("http://localhost:3000/status")
+  }
+  getTaskbyDevelop(devloper: any): Observable<any> {
+    return this.httpClient.post("http://localhost:3000/getTaskbyDevelop", devloper)
+  }
+  getprojectbyStatus(status: any): Observable<any> {
+    return this.httpClient.get("http://localhost:3000/getprojectbyStatus/" + status)
+  }
+  getTaskbyProject(project: any): Observable<any> {
+    return this.httpClient.post("http://localhost:3000/getTaskbyProject", project)
+  }
+  getUserbyRole(role: any): Observable<any> {
+    return this.httpClient.get("http://localhost:3000/getUserbyRole/" + role)
+  }
+  getModulesbyStatus(statusId: any): Observable<any> {
+    return this.httpClient.get("http://localhost:3000/getModulebyStatus/" +statusId)
+  }
+  getTaskbyStatus(statusId: any): Observable<any> {
+    return this.httpClient.get("http://localhost:3000/getTaskbyStatus/" +statusId)
+  }
+  getpriorityName(priorityId: any): Observable<any> {
+    return this.httpClient.get("http://localhost:3000/getpriorityName/" +priorityId)
+  }
+
+
+
+
+
+  //Project Manager
+  getAllUser(): Observable<any> {
+    return this.httpClient.get("http://localhost:3000/usersforProjectManager")
+  }
+  
   
 }
